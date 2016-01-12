@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Flickr API Demo</title>
+	  <style>
+		body{
+			background:black;
+			text-align:center;
+			font-family:Verdana, Tahoma, Arial;
+			padding:0;
+			margin:0;
+			color:white;
+		}
+		div#btnLoad{
+			padding:2px 20px;
+			margin: 4px auto 2px auto;
+			background: #e3e3e3;
+			border:1px solid white;
+			width:100px;
+			height: 18px;
+			line-height:16px;
+			cursor:pointer;
+			border-radius:3px;
+			color:maroon;
+			display:inline-block;
+		}
+		div#btnLoad:hover{
+			border:1px solid yellow;
+		}
+		img{
+			border:1px solid white;
+			height:115px;
+			width:115px;
+		}
+		input[type=text]{
+			
+		}
+		div.panel{
+			margin:0 auto;
+			position:fixed;
+			bottom:0px;
+			left:0px;
+			background:#f5f5f5;
+			color:maroon;
+			height:30px;
+		}
+	  </style>
+	  <script src="jquery-1.10.2.min.js"></script>
+	  <script src="flickr.js"></script>
+	  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-11272237-1']);
+  _gaq.push(['_setDomainName', 'sreenath.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+   </head>
+   <body>
+		<div class="panel">
+			 Enter Tags: 
+			<input type="text"></input>
+			<input type="text"></input>
+			<input type="text"></input>
+			<input type="text"></input>
+			<input type="text"></input>
+			<div id="btnLoad">Load</div>
+		</div>
+   </body>
+</html>

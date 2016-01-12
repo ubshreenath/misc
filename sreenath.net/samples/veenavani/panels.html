@@ -1,0 +1,66 @@
+
+<div class="panels">
+    <div class="grid_3 vpanel" id="pnlHome" style="background:#906;">
+        <h2>Home</h2>
+    </div>
+    <div class="grid_3 vpanel" id="pnlEvents" style="background:#306;">
+        <h2>Events &amp; Activities</h2>
+    </div>
+    <div class="grid_3 vpanel" id="pnlGallery" style="background:#360;">
+        <h2>Gallery</h2>
+    </div>
+    <div class="grid_3 vpanel" id="pnlContact" style="background:#300;">
+        <h2>Contact Us</h2>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<script>
+	$(".vpanel").click(function(event){
+		var $this = $(this);
+		$this.unbind("click")
+			   .siblings()
+			   .hide("fold", 1000);
+		setTimeout(function(){
+					$this.animate({width:"940px", 
+								   paddingTop:"10px",
+								   height:"520px"}, 1000, function(){
+									   loadContent($this);
+								   })
+						 .css("cursor","default");
+				   }, 1050);
+	});
+	
+	function loadContent($container){
+		$(".lnkBack").show();
+		var pnlId = $container[0].id;
+		switch(pnlId){
+		   case "pnlHome":
+				 $.get("home.html",function(data){
+					$container.append("<br class='clear'/>")
+						 .append(data)
+						 .css("width","940px")
+						 .parent()
+						 .css("height","100%");
+				 });
+		   break;
+		   case "pnlEvents":
+				$.get("events.html",function(data){
+					$container.append("<br class='clear'/>").append(data);
+				});
+		   break;
+		   case "pnlGallery":
+				$.get("gallery.html",function(data){
+					$container.append("<br class='clear'/>").append(data);
+				});
+		   break;
+		   case "pnlContact":
+				$.get("contact.html",function(data){
+					$container.append("<br class='clear'/>").append(data);
+				});
+		   break;
+		   default:	LoadHome();
+		   break;
+	   }
+	}
+</script>

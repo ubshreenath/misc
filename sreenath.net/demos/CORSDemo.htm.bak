@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CORS Demo</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap-switch.min.css" />
+    <!--<link href="styles/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+      <style>
+          #output p
+          {
+              border-bottom:1px solid #cecece;
+              margin-left:-15px;
+              margin-right:-15px;
+              padding-left:15px;
+              padding-right:15px;
+          }
+      </style>
+  </head>
+  <body>
+    
+    <div class="container">
+        <nav class="" role="navigation">
+            <ul class="nav navbar-nav navbar-inverse">
+                <li><a href="http://sreenath.net">Home</a></li>
+                <li><a href="http://sreenath.net/blog/">Blog</a></li>
+                <li><a href="http://sreenath.net/contact/">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="jumbotron">
+        
+        <div class="container">
+            <h1>Cross Origin Resource Sharing Demo</h1>
+            <h3>Demo to showcase the Cross Origin Resource Sharing Recommendation by W3C</h3>
+        </div>
+    </div>
+
+    <div class="container">
+        <form>
+        <br />
+        <div class="row">
+            <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                <input type="text" class="form-control" placeholder="City, State" id="txtLocation" tabindex="1" autofocus="autofocus" required="required" />
+            </div>
+            <div class="col-lg-2 col-md-1 col-sm-6 col-xs-6">
+                <input type="submit" class="btn btn-primary" id="btnLoad" tabindex="2" value="Load Weather" />
+            </div>
+
+        </div>
+        <br />
+        <div class="row hidden" id="errLocationEmpty">
+            <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                <p class="alert alert-danger">Please enter a City, State</p>
+            </div>
+        </div>
+        <div class="row hidden" id="errLocationNotFound">
+            <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                <p class="alert alert-danger">Location not found. Try a different City, State</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="panel panel-primary hidden">
+                    <div class="panel-heading">
+                        Weather Info
+                        <span class="pull-right">
+                            <input type="checkbox" name="TempUnit" />
+                        </span>
+                    </div>
+                    <div class="panel-body" id="output">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        
+            </form>
+    </div><!-- /.container -->
+    <footer class="navbar well">
+            <div class="">
+                <span>&copy; Copyright <a href="http://sreenath.net">Sreenath H B</a></span> |
+                <span>Data loaded from <a href="http://openweathermap.org/" title="Open Weather Map" target="_blank">openweathermap.org</a></span> | 
+                <span>Credits to <a href="http://getbootstrap.com/">Bootstrap</a> and <a href="http://www.bootstrap-switch.org/">Bootstrap Switch</a></span> | 
+                <span><a href="http://sreenath.net/blog/">Back to Article</a></span>
+            </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <!--<script src="scripts/bootstrap.min.js"></script>-->
+    <script src="scripts/bootstrap-switch.min.js"></script>
+      <script>
+          
+          $(function () {
+              var weatherObj = null;
+              $("[name='TempUnit']").bootstrapSwitch({
+                  size: "mini",
+                  onColor: "success",
+                  offColor: "warning",
+                  onText: "&deg;F",
+                  offText: "&deg;C",
+                  labelText: "Unit",
+                  onSwitchChange: function (e, s) {
+                      if (weatherObj) {
+                          $("#output").html(getWeatherStr());
+                      }
+                  }
+              });
+
+              $("#btnLoad").click(function (ev) {
+                  ev.preventDefault();
+                  if ($("#txtLocation").val() == "") {
+                      $("#errLocationEmpty").hide().removeClass("hidden").slideDown();
+                      $("#errLocationNotFound").slideUp(function () { this.classList.add("hidden") });
+                      $("#output").parent().slideUp("fast", function () { this.classList.add("hidden") });
+                  }
+                  else {
+                      $("#errLocationEmpty").slideUp(function () { this.classList.add("hidden") });
+                      //$("#output").parent().slideUp("fast").removeClass("hidden").slideDown();
+                      var xhr = new XMLHttpRequest();
+                      var url = "http://api.openweathermap.org/data/2.5/weather?q=" + $("#txtLocation").val().trim();
+                      xhr.open("GET", url);
+                      xhr.onreadystatechange = function () {
+                          if (xhr.readyState == 4 && xhr.status == 200) {
+                              weatherObj = JSON.parse(xhr.responseText);
+                              if (weatherObj.cod && weatherObj.cod == 404) {
+                                  $("#errLocationNotFound").hide().removeClass("hidden").slideDown();
+                                  $("#output").parent().slideUp("fast", function () { this.classList.add("hidden") });
+                              }
+                              else {
+                                  $("#errLocationNotFound").slideUp(function () { this.classList.add("hidden") });
+                                  $("#output").html(getWeatherStr()).parent(".hidden").hide().removeClass("hidden").slideDown();;
+                              }
+                          }
+                      }
+                      xhr.send();
+                  }
+              });
+
+              function getWeatherStr() {
+                  var fahrenheit = $("[name='TempUnit']").get(0).checked;
+                  var temp = Math.round((weatherObj.main.temp - 273.15) * 100) / 100;
+                  var maxtemp = Math.round((weatherObj.main.temp_max - 273.15) * 100) / 100;
+                  var mintemp = Math.round((weatherObj.main.temp_min - 273.15) * 100) / 100;
+
+                  if (fahrenheit) {
+                      temp = Math.round((temp * 180) / 100) + 32;
+                      maxtemp = Math.round((maxtemp * 180) / 100) + 32;
+                      mintemp = Math.round((mintemp * 180) / 100) + 32;
+                  }
+
+                  var iconUrl = "http://openweathermap.org/img/w/" + weatherObj.weather[0].icon + ".png";
+
+                  var opstr = "<p> Location: " + weatherObj.name + ", " + weatherObj.sys.country + "<img src='" + iconUrl + "'/></p>";
+                  opstr += "<p> Current Temperature: " + temp + "</p>";
+                  opstr += "<p> Max. Temperature: " + maxtemp + "</p>";
+                  opstr += "<p> Min. Temperature: " + mintemp + "</p>";
+                  opstr += "<p> Humidity: " + (weatherObj.main.humidity) + "%</p>";
+                  opstr += "<p> Description: " + weatherObj.weather[0].description + "</p>";
+                  
+                  return opstr;
+              }
+
+          });
+
+          
+  
+
+      </script>
+  </body>
+</html>

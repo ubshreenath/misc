@@ -1,0 +1,86 @@
+/* -- Element Selector using the tag name -- */
+body{
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+/* -- Class Selector using a '.' -- */
+.logo{
+	width:150px;
+	float:left;
+}
+
+.container{
+	width:90%;
+	margin:0 auto;
+}
+
+/* -- ID Selector using a '#' -- */
+#mainContent{
+	
+}
+
+.vehicle-image{
+	width:250px;
+}
+
+.vehicle-image img{
+	width:100%;
+}
+.hidden{
+	display:none;
+}
+
+.compareCol{
+	float:left;
+	width:25%;
+	text-align:center;
+}
+.clear{
+	display:block;
+	float:none;
+	clear:both;
+}
+
+td{
+	border-bottom:1px solid #c5c5c5;
+}
+
+#specsTable{
+	overflow:auto;
+	background:#f5f5f5;	
+}
+
+#specsTable table{
+	width:100%;
+	text-align:center;
+}
+
+#specsTable td{
+	width:33%;
+	
+}
+
+#grandTotal{
+	float:right;
+	margin-right:45px;
+}
+
+.floatleft{
+	float:left;
+}
+
+#carImg{
+	float:left;
+	width:320px;
+	height:240px;
+	margin:0 25px;
+	background-image:url("../images/camry.png");
+}
+
+#featured ul{
+	list-style-type:square;
+	list-style-position:inside;
+}
+
+#featured li{
+	
+}

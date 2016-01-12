@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Page Title Goes Here</title>
+        <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+		<!-- Load stylesheets at the top for best performance -->
+		<link href="styles/odometer-theme-minimal.css" rel="stylesheet"/>
+		<link href="styles/styles.css" rel="stylesheet"/>
+    </head>
+    <body>
+		<div class="container">
+			<header>
+				<div class="logo">
+					Logo
+				</div>
+				<h1>
+					Site Title
+				</h1>
+				<nav>
+					Navigation Links Go Here - Use UL/LI Tags
+				</nav>    
+			</header>
+			<div id="mainContent">
+				<section id="featured">
+					<div id="carImg"></div>
+					<h2>2014 Toyota Camry XLE</h2>
+					<ul>
+						<li>25/35 MPG City/HWY</li>
+						<li>Base Spec 2</li>
+						<li>Base Spec 3</li>
+						<li>Base Spec 4</li>
+						<li>Base Spec 5</li>
+						
+					</ul>
+					<h3>Base Price: $ 23230</h3>
+				</section>
+				<hr class="clear"/>
+				<form id="frmBuilder">
+					<div id="specsTable">
+						<table>
+							<tbody>
+								<tr>
+									<td> Engine </td>
+									<td>
+										<select id="ddlEngine">
+											<option value="i4">2.5L I4</option>
+											<option value="v6">3.5L V6</option>
+										</select>
+									</td>
+									<td>
+										<strong>$ <span id="lblEngine" class="odometer">0</span></strong>
+									</td>
+								</tr>
+								<tr>
+									<td> 
+										Feature 2 
+									</td>
+									<td>
+										Options
+									</td>
+									<td>
+										Cost
+									</td>
+								</tr>
+								<tr>
+									<td> 
+										Feature 3 
+									</td>
+									<td>
+										Options
+									</td>
+									<td>
+										Cost
+									</td>
+								</tr>
+								<tr>
+									<td> 
+										Feature 4 
+									</td>
+									<td>
+										Options
+									</td>
+									<td>
+										Cost
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</form>
+				<section id="grandTotal">
+					<h3>Grand Total: $ <span id="lblGrandTotal" class="odometer">23230</span></h3>
+					<input type="button" id="btnSave" value="Save" />
+				</section>
+			</div>
+			<hr class="clear"/>
+			<footer>
+				<div class="float-left">
+					<p>&copy; 2014 - <a href="http://eIntern.com">eIntern</a></p>
+				</div>
+				<div class="float-right">
+					10565 Fairfax Blvd, Ste 301. Fairfax, VA - 22030.
+				</div>
+			</footer>
+		</div>
+		<!-- Load scripts at bottom for best performance -->
+		<script src="scripts/odometer.min.js"></script>
+		<script src="scripts/script.js"></script>
+    </body>
+</html>
