@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+            function activate(str){
+               document.getElementById('output').innerHTML = str + ' - This was added by the script in the pre tags <br/>';
+               alert('If you see this, the script inside the pre tags executed')
+            }
+    </script>
+    </head>
+    <body>
+        <div id='output'>
+
+        </div>
+        Content outside XMP
+       <xmp>
+                    Inside XMP Tags
+                    <script>activate('Script code - inside code tags')</script>
+                <code>
+            </pre>
+        </xmp>
+        
+
+        
+        
+        
+    </body>
+</html>
