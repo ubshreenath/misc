@@ -281,7 +281,7 @@
 								<input type="submit" id="loginForm:j_idt124" class="btn btn-primary" value="Register" />
 							</form>
 						</div>
-						<iframe name="outframe" src="https://app.revature.com/apply" class="hidden"></iframe>
+						<iframe name="outframe" src="" class="hidden"></iframe>
 						<div class="hidden" id="thankyou">
 							 <div class="alert alert-success">
 								<button type="button" class="close" data-dismiss="alert"><span>×</span></button>
@@ -529,7 +529,7 @@
 			});
 			
 			$.ajax({
-				url:"https://app.revature.com/apply",
+			    url: "https://preview.revature.com/apply",
 				method:"GET"				
 			}).done(function(html){
 			    var viewstate = $(html).find("[name$='ViewState']").val();
