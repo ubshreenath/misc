@@ -1,0 +1,906 @@
+/* ==============================================================
+
+Template name : Nakula responsive bootstrap app landing page
+Categorie : Landing page
+Author : Nce18cex
+Version : v1.0.0
+Created : 9 April 2016
+Last update : 10 April 2016
+
+-----------------------------------------------------------------
+CSS structure
+-----------------------------------------------------------------
+
+01. Primary color
+02. Primary background
+03. Primary border
+04. Blue color
+05. Purple color
+06. Pink color
+07. Yellow color
+08. Green color
+09. Red color
+	
+============================================================== */
+
+
+/*
+Primary color
+=========================== */
+a,
+a:hover,
+a:focus,
+a:active,
+.btn-link,
+.btn-link:hover,
+.btn-link:active,
+.primary,
+.list-icons li i,
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus,
+.navbar-nav > li > a:active,
+.navbar-nav > li.dropdown > a.dropdown-toggle:hover,
+.navbar-nav > li.dropdown > a.dropdown-toggle:focus,
+.navbar-nav > li.dropdown > a.dropdown-toggle:active,
+.dropdown-menu li.active > a:hover,
+.dropdown-menu li.active > a:focus,
+.dropdown-menu li.active > a,
+.navbar-nav > li.dropdown.selected > a,
+.navbar-nav > li.active > a,
+.navbar-nav > li.active > a:hover,
+.navbar-nav > li.active > a:focus,
+.navbar-nav > li.active > a:active,
+.navbar-nav > li.selected > a,
+.navbar-nav > li.selected > a:hover,
+.navbar-nav > li.selected > a:focus,
+.navbar-nav > li.selected > a:active,
+.cart-dropdown ul li a:hover,
+.cart-dropdown ul li a:focus,
+.cart-dropdown ul li a:active,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:active,
+.navbar.navbar-white .navbar-nav > li > a:hover,
+.navbar.navbar-white .navbar-nav > li > a:focus,
+.navbar.navbar-white .navbar-nav > li > a:active,
+.navbar.navbar-white .navbar-nav > li.dropdown > a.dropdown-toggle:hover,
+.navbar.navbar-white .navbar-nav > li.dropdown > a.dropdown-toggle:focus,
+.navbar.navbar-white .navbar-nav > li.dropdown > a.dropdown-toggle:active,
+.navbar.navbar-white .navbar-nav > li.dropdown.selected > a,
+.navbar.navbar-white .navbar-nav > li.active > a,
+.navbar.navbar-white .navbar-nav > li.active > a:hover,
+.navbar.navbar-white .navbar-nav > li.active > a:focus,
+.navbar.navbar-white .navbar-nav > li.active > a:active,
+.navbar.navbar-white .dropdown-menu li a:hover,
+.navbar.navbar-white .dropdown-menu li a:focus,
+.navbar.navbar-white .dropdown-menu li a:active,
+.yamm-link li a:hover,
+.yamm-link li a:focus,
+.yamm-link li a:active,
+#demo-container h5 a:hover,
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong,
+.captionHeadline2 span,
+.btn-primary.btn-bordered,
+.fa-primary,
+.noempaty,
+.error,
+.status-progress,
+.fa-primary,
+.nav-tabs > li > a:hover,
+.icon-circle.icon-bordered.fa-primary,
+.icon-square.icon-bordered.fa-primary,
+.widget ul.footer-link li a:hover,
+.panel-title a:hover,
+.pricing-price,
+.post-heading .rating,
+.post-heading h1 a:hover,
+.post-heading h2 a:hover,
+.post-heading h3 a:hover,
+.post-heading h4 a:hover,
+.post-heading h5 a:hover,
+.post-heading h6 a:hover,
+.post-content h5 a:hover,
+.footer-post ul li a:hover,
+.post-content .footer-post ul li a:hover,
+.post-date,
+.product-list h6 a:hover,
+.counter-item p,
+.counter-item .fa,
+.tag:hover,
+.main-form .title span,
+.cat li a:hover,
+.product-footer .price span,
+.precess-column .text-title,
+.process-icon > span,
+.close-button:hover{
+    color: #dd7554;
+}
+
+/*
+Primary background
+=========================== */
+.styled-table thead,
+ol.process-line > li.active > .icons > .fa,
+ol.process-line > li.active:before,
+ol.process-line > li.active:after,
+.slider-wrapper,
+.product-label,
+.object,
+#toTopHover,
+.inner-head,
+.primary-bg,
+.btn-primary,
+.btn-link:before,
+.drop-primary.drop-circle,
+.drop-primary.drop-square,
+.highlight.primary,
+.icon-circle.fa-primary,
+.icon-square.fa-primary,
+.box-primary,
+.icon-column.box-primary,
+.cta-primary,
+.circle-progress.primary span,
+.progress.progress-primary .progress-bar,
+.maps.map-primary i,
+.filter-items li a:hover,
+.filter-items li a.active,
+.filter-items li a.active:hover,
+.filter-items li a.active:focus,
+.filter-items li a.active:active,
+.widget .footer-network a:hover .icon-circle,
+.panel-title a:hover .plus,
+.panel-title a .minus,
+.panel-title a:hover .minus,
+.pricing.popular .pricing-price,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus,
+.gray-container .nav-tabs > li.active > a,
+.gray-container .nav-tabs > li.active > a:hover,
+.gray-container .nav-tabs > li.active > a:focus,
+.team-network,
+.basket-shopping,
+.show-caption,
+.jssor-navigator div:hover,
+.jssor-navigator .av:hover,
+.jssor-navigator .av,
+.jssor-navigator .dn,
+.jssor-navigator .dn:hover,
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus,
+.social-network .icon-circle:hover,
+.social-network .icon-circle:active,
+.social-network .icon-circle:focus,
+.flex-control-paging li a:hover,
+.img-caption,
+.flex-control-paging li a.flex-active{
+	background-color: #dd7554;
+}
+
+.checkator_source:checked+.checkator_element:after{
+    background-color: #dd7554;
+}
+
+.captionHeadline3,
+.img-caption{
+	background-color:rgba(221, 117, 84, 0.98888);
+}
+
+.team-caption{
+	background:rgba(221, 117, 84, 0.4);
+}
+
+.slider-wrapper.sunsetbg{
+	background-image:url(img/sun.png);
+}
+
+.rocks-bg,
+footer{
+	background-image:url(img/highlands.png);
+}
+
+.rocket-bg{
+	background-image:url(img/rocket.png);
+}
+
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary,
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus,
+.show-caption:hover,
+.navlink-right span.cart-item,
+.img-caption  .zoomer:hover,
+.icon-circle.fa-primary:hover,
+.icon-square.fa-primary:hover,
+.show-caption:hover{
+    background-color: #c35634;
+}
+
+/*
+Primary border
+=========================== */
+.flexslider.detail ol.flex-control-thumbs li img.flex-active,
+ol.process-line > li.active > .icons > .fa,
+.primary-border,
+.btn-primary,
+.btn-primary.btn-bordered,
+.btn-primary.btn-bordered.btn-icon .fa,
+.icons-wrapp.icons-primary,
+.icon-circle.icon-bordered.fa-primary,
+.icon-square.icon-bordered.fa-primary,
+.dropdown-menu,
+.filter-items li a:hover,
+.filter-items li a.active,
+.filter-items li a.active:hover,
+.filter-items li a.active:focus,
+.filter-items li a.active:active,
+.form-control:focus,
+.jcf-select:focus,
+.checkator_source:focus+.checkator_element,
+.checkator_source:hover+.checkator_element,
+.pricing.popular,
+.pricing:hover,
+.pricing.popular .pricing-price,
+.tab-secondary .nav-tabs,
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus{
+    border-color: #dd7554;
+}
+
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary,
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus,
+.icon-circle.icon-bordered.fa-primary:hover,
+.icon-square.icon-bordered.fa-primary:hover{
+    border-color: #c35634;
+}
+
+.btn-primary{
+    border-bottom-color: #c35634;
+}
+
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary,
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus,
+.icon-circle.icon-bordered.fa-primary:hover,
+.icon-square.icon-bordered.fa-primary:hover{
+    border-bottom-color: #a7492c;
+}
+
+/*
+Blue color
+=========================== */
+.blue,
+.btn-blue.btn-bordered,
+.fa-blue,
+.icon-circle.icon-bordered.fa-blue,
+.icon-square.icon-bordered.fa-blue{
+    color: #35bfd4;
+}
+
+.icon-circle.icon-bordered.fa-blue:hover,
+.icon-square.icon-bordered.fa-blue:hover{
+    color: #2ea6b8;
+}
+
+.blue-bg,
+.btn-blue,
+.highlight.blue,
+.icon-circle.fa-blue,
+.icon-square.fa-blue,
+.donut-chart.chart-blue .pie,
+.progress.progress-blue .progress-bar{
+    background-color: #35bfd4;
+}
+
+.btn-blue:focus,
+.btn-blue.focus,
+.btn-blue:hover,
+.btn-blue:active,
+.btn-blue.active,
+.open > .dropdown-toggle.btn-blue,
+.btn-blue:active:hover,
+.btn-blue.active:hover,
+.open > .dropdown-toggle.btn-blue:hover,
+.btn-blue:active:focus,
+.btn-blue.active:focus,
+.open > .dropdown-toggle.btn-blue:focus,
+.btn-blue:active.focus,
+.btn-blue.active.focus,
+.open > .dropdown-toggle.btn-blue.focus,
+.icon-circle.fa-blue:hover,
+.icon-square.fa-blue:hover{
+    background-color: #2ea6b8;
+}
+
+.blue-border,
+.btn-blue,
+.btn-blue.btn-bordered,
+.btn-blue.btn-bordered.btn-icon .fa,
+.icon-circle.icon-bordered.fa-blue,
+.icon-square.icon-bordered.fa-blue{
+    border-color: #35bfd4;
+}
+
+.btn-blue:focus,
+.btn-blue.focus,
+.btn-blue:hover,
+.btn-blue:active,
+.btn-blue.active,
+.open > .dropdown-toggle.btn-blue,
+.btn-blue:active:hover,
+.btn-blue.active:hover,
+.open > .dropdown-toggle.btn-blue:hover,
+.btn-blue:active:focus,
+.btn-blue.active:focus,
+.open > .dropdown-toggle.btn-blue:focus,
+.btn-blue:active.focus,
+.btn-blue.active.focus,
+.open > .dropdown-toggle.btn-blue.focus,
+.icon-circle.icon-bordered.fa-blue:hover,
+.icon-square.icon-bordered.fa-blue:hover{
+    border-color: #2ea6b8;
+}
+
+.btn-blue{
+    border-bottom-color: #2ea6b8;
+}
+
+.btn-blue:focus,
+.btn-blue.focus,
+.btn-blue:hover,
+.btn-blue:active,
+.btn-blue.active,
+.open > .dropdown-toggle.btn-blue,
+.btn-blue:active:hover,
+.btn-blue.active:hover,
+.open > .dropdown-toggle.btn-blue:hover,
+.btn-blue:active:focus,
+.btn-blue.active:focus,
+.open > .dropdown-toggle.btn-blue:focus,
+.btn-blue:active.focus,
+.btn-blue.active.focus,
+.open > .dropdown-toggle.btn-blue.focus,
+.icon-circle.icon-bordered.fa-blue:hover,
+.icon-square.icon-bordered.fa-blue:hover{
+    border-bottom-color: #228e9e;
+}
+
+/*
+Purple color
+=========================== */
+.purple,
+.btn-purple.btn-bordered,
+.fa-purple,
+.icon-circle.icon-bordered.fa-purple,
+.icon-square.icon-bordered.fa-purple{
+    color: #8f64a2;
+}
+
+.icon-circle.icon-bordered.fa-purple:hover,
+.icon-square.icon-bordered.fa-purple:hover{
+    color: #704e7f;
+}
+
+.purple-bg,
+.btn-purple,
+.highlight.purple,
+.icon-circle.fa-purple,
+.icon-square.fa-purple,
+.donut-chart.chart-purple .pie,
+.progress.progress-purple .progress-bar{
+    background-color: #8f64a2;
+}
+
+.btn-purple:focus,
+.btn-purple.focus,
+.btn-purple:hover,
+.btn-purple:active,
+.btn-purple.active,
+.open > .dropdown-toggle.btn-purple,
+.btn-purple:active:hover,
+.btn-purple.active:hover,
+.open > .dropdown-toggle.btn-purple:hover,
+.btn-purple:active:focus,
+.btn-purple.active:focus,
+.open > .dropdown-toggle.btn-purple:focus,
+.btn-purple:active.focus,
+.btn-purple.active.focus,
+.open > .dropdown-toggle.btn-purple.focus,
+.icon-circle.fa-purple:hover,
+.icon-square.fa-purple:hover{
+    background-color: #704e7f;
+}
+
+.purple-border,
+.btn-purple,
+.btn-purple.btn-bordered,
+.btn-purple.btn-bordered.btn-icon .fa,
+.icon-circle.icon-bordered.fa-purple,
+.icon-square.icon-bordered.fa-purple{
+    border-color: #8f64a2;
+}
+
+
+.btn-purple:focus,
+.btn-purple.focus,
+.btn-purple:hover,
+.btn-purple:active,
+.btn-purple.active,
+.open > .dropdown-toggle.btn-purple,
+.btn-purple:active:hover,
+.btn-purple.active:hover,
+.open > .dropdown-toggle.btn-purple:hover,
+.btn-purple:active:focus,
+.btn-purple.active:focus,
+.open > .dropdown-toggle.btn-purple:focus,
+.btn-purple:active.focus,
+.btn-purple.active.focus,
+.open > .dropdown-toggle.btn-purple.focus,
+.icon-circle.icon-bordered.fa-purple:hover,
+.icon-square.icon-bordered.fa-purple:hover{
+    border-color: #704e7f;
+}
+
+.btn-purple{
+    border-bottom-color: #704e7f;
+}
+
+.btn-purple:focus,
+.btn-purple.focus,
+.btn-purple:hover,
+.btn-purple:active,
+.btn-purple.active,
+.open > .dropdown-toggle.btn-purple,
+.btn-purple:active:hover,
+.btn-purple.active:hover,
+.open > .dropdown-toggle.btn-purple:hover,
+.btn-purple:active:focus,
+.btn-purple.active:focus,
+.open > .dropdown-toggle.btn-purple:focus,
+.btn-purple:active.focus,
+.btn-purple.active.focus,
+.open > .dropdown-toggle.btn-purple.focus,
+.icon-circle.icon-bordered.fa-purple:hover,
+.icon-square.icon-bordered.fa-purple:hover{
+    border-bottom-color: #563564;
+}
+
+/*
+Pink color
+=========================== */
+.pink,
+.btn-pink.btn-bordered,
+.fa-pink,
+.icon-circle.icon-bordered.fa-pink,
+.icon-square.icon-bordered.fa-pink{
+    color: #d96ba1;
+}
+
+.icon-circle.icon-bordered.fa-pink:hover,
+.icon-square.icon-bordered.fa-pink:hover{
+    color: #b75a88;
+}
+
+.pink-bg,
+.btn-pink,
+.highlight.pink,
+.icon-circle.fa-pink,
+.icon-square.fa-pink,
+.donut-chart.chart-pink .pie,
+.progress.progress-pink .progress-bar{
+    background-color: #d96ba1;
+}
+
+.btn-pink:focus,
+.btn-pink.focus,
+.btn-pink:hover,
+.btn-pink:active,
+.btn-pink.active,
+.open > .dropdown-toggle.btn-pink,
+.btn-pink:active:hover,
+.btn-pink.active:hover,
+.open > .dropdown-toggle.btn-pink:hover,
+.btn-pink:active:focus,
+.btn-pink.active:focus,
+.open > .dropdown-toggle.btn-pink:focus,
+.btn-pink:active.focus,
+.btn-pink.active.focus,
+.open > .dropdown-toggle.btn-pink.focus,
+.icon-circle.fa-pink:hover,
+.icon-square.fa-pink:hover{
+    background-color: #b75a88;
+}
+
+.pink-border,
+.btn-pink,
+.btn-pink.btn-bordered,
+.btn-pink.btn-bordered.btn-icon .fa,
+.icon-circle.icon-bordered.fa-pink,
+.icon-square.icon-bordered.fa-pink{
+    border-color: #d96ba1;
+}
+
+.btn-pink:focus,
+.btn-pink.focus,
+.btn-pink:hover,
+.btn-pink:active,
+.btn-pink.active,
+.open > .dropdown-toggle.btn-pink,
+.btn-pink:active:hover,
+.btn-pink.active:hover,
+.open > .dropdown-toggle.btn-pink:hover,
+.btn-pink:active:focus,
+.btn-pink.active:focus,
+.open > .dropdown-toggle.btn-pink:focus,
+.btn-pink:active.focus,
+.btn-pink.active.focus,
+.open > .dropdown-toggle.btn-pink.focus,
+.icon-circle.icon-bordered.fa-pink:hover,
+.icon-square.icon-bordered.fa-pink:hover{
+    border-color: #b75a88;
+}
+
+.btn-pink{
+    border-bottom-color: #b75a88;
+}
+
+.btn-pink:focus,
+.btn-pink.focus,
+.btn-pink:hover,
+.btn-pink:active,
+.btn-pink.active,
+.open > .dropdown-toggle.btn-pink,
+.btn-pink:active:hover,
+.btn-pink.active:hover,
+.open > .dropdown-toggle.btn-pink:hover,
+.btn-pink:active:focus,
+.btn-pink.active:focus,
+.open > .dropdown-toggle.btn-pink:focus,
+.btn-pink:active.focus,
+.btn-pink.active.focus,
+.open > .dropdown-toggle.btn-pink.focus,
+.icon-circle.icon-bordered.fa-pink:hover,
+.icon-square.icon-bordered.fa-pink:hover{
+    border-bottom-color: #9e4672;
+}
+
+/*
+Yellow color
+=========================== */
+.yellow,
+.btn-yellow.btn-bordered,
+.fa-yellow,
+.icon-circle.icon-bordered.fa-yellow,
+.icon-square.icon-bordered.fa-yellow{
+    color: #e3b041;
+}
+
+.icon-circle.icon-bordered.fa-yellow:hover,
+.icon-square.icon-bordered.fa-yellow:hover{
+    color: #c69939;
+}
+
+.yellow-bg,
+.btn-yellow,
+.highlight.yellow,
+.icon-circle.fa-yellow,
+.icon-square.fa-yellow,
+.donut-chart.chart-yellow .pie,
+.progress.progress-yellow .progress-bar{
+    background-color: #e3b041;
+}
+
+.btn-yellow:focus,
+.btn-yellow.focus,
+.btn-yellow:hover,
+.btn-yellow:active,
+.btn-yellow.active,
+.open > .dropdown-toggle.btn-yellow,
+.btn-yellow:active:hover,
+.btn-yellow.active:hover,
+.open > .dropdown-toggle.btn-yellow:hover,
+.btn-yellow:active:focus,
+.btn-yellow.active:focus,
+.open > .dropdown-toggle.btn-yellow:focus,
+.btn-yellow:active.focus,
+.btn-yellow.active.focus,
+.open > .dropdown-toggle.btn-yellow.focus,
+.icon-circle.fa-yellow:hover,
+.icon-square.fa-yellow:hover{
+    background-color: #c69939;
+}
+
+.yellow-border,
+.btn-yellow,
+.btn-yellow.btn-bordered,
+.btn-yellow.btn-bordered.btn-icon .fa,
+.icon-circle.icon-bordered.fa-yellow,
+.icon-square.icon-bordered.fa-yellow{
+    border-color: #e3b041;
+}
+
+.btn-yellow:focus,
+.btn-yellow.focus,
+.btn-yellow:hover,
+.btn-yellow:active,
+.btn-yellow.active,
+.open > .dropdown-toggle.btn-yellow,
+.btn-yellow:active:hover,
+.btn-yellow.active:hover,
+.open > .dropdown-toggle.btn-yellow:hover,
+.btn-yellow:active:focus,
+.btn-yellow.active:focus,
+.open > .dropdown-toggle.btn-yellow:focus,
+.btn-yellow:active.focus,
+.btn-yellow.active.focus,
+.open > .dropdown-toggle.btn-yellow.focus,
+.icon-circle.icon-bordered.fa-yellow:hover,
+.icon-square.icon-bordered.fa-yellow:hover{
+    border-color: #c69939;
+}
+
+.btn-yellow{
+    border-bottom-color: #c69939;
+}
+
+.btn-yellow:focus,
+.btn-yellow.focus,
+.btn-yellow:hover,
+.btn-yellow:active,
+.btn-yellow.active,
+.open > .dropdown-toggle.btn-yellow,
+.btn-yellow:active:hover,
+.btn-yellow.active:hover,
+.open > .dropdown-toggle.btn-yellow:hover,
+.btn-yellow:active:focus,
+.btn-yellow.active:focus,
+.open > .dropdown-toggle.btn-yellow:focus,
+.btn-yellow:active.focus,
+.btn-yellow.active.focus,
+.open > .dropdown-toggle.btn-yellow.focus,
+.icon-circle.icon-bordered.fa-yellow:hover,
+.icon-square.icon-bordered.fa-yellow:hover{
+    border-bottom-color: #ad8328;
+}
+
+/*
+Green color
+=========================== */
+.green,
+.btn-green.btn-bordered,
+.fa-green,
+.icon-circle.icon-bordered.fa-green,
+.icon-square.icon-bordered.fa-green{
+    color: #5bc43e;
+}
+
+.icon-circle.icon-bordered.fa-green:hover,
+.icon-square.icon-bordered.fa-green:hover{
+    color: #4ca334;
+}
+
+.green-bg,
+.btn-green,
+.highlight.green,
+.icon-circle.fa-green,
+.icon-square.fa-green,
+.donut-chart.chart-green .pie,
+.progress.progress-green .progress-bar{
+    background-color: #5bc43e;
+}
+
+.btn-green:focus,
+.btn-green.focus,
+.btn-green:hover,
+.btn-green:active,
+.btn-green.active,
+.open > .dropdown-toggle.btn-green,
+.btn-green:active:hover,
+.btn-green.active:hover,
+.open > .dropdown-toggle.btn-green:hover,
+.btn-green:active:focus,
+.btn-green.active:focus,
+.open > .dropdown-toggle.btn-green:focus,
+.btn-green:active.focus,
+.btn-green.active.focus,
+.open > .dropdown-toggle.btn-green.focus,
+.icon-circle.fa-green:hover,
+.icon-square.fa-green:hover{
+    background-color: #4ca334;
+}
+
+.green-border,
+.btn-green,
+.btn-green.btn-bordered,
+.btn-green.btn-bordered.btn-icon .fa,
+.icon-circle.icon-bordered.fa-green,
+.icon-square.icon-bordered.fa-green{
+    border-color: #5bc43e;
+}
+
+.btn-green:focus,
+.btn-green.focus,
+.btn-green:hover,
+.btn-green:active,
+.btn-green.active,
+.open > .dropdown-toggle.btn-green,
+.btn-green:active:hover,
+.btn-green.active:hover,
+.open > .dropdown-toggle.btn-green:hover,
+.btn-green:active:focus,
+.btn-green.active:focus,
+.open > .dropdown-toggle.btn-green:focus,
+.btn-green:active.focus,
+.btn-green.active.focus,
+.open > .dropdown-toggle.btn-green.focus,
+.icon-circle.icon-bordered.fa-green:hover,
+.icon-square.icon-bordered.fa-green:hover{
+    border-color: #4ca334;
+}
+
+.btn-green{
+    border-bottom-color: #4ca334;
+}
+
+.btn-green:focus,
+.btn-green.focus,
+.btn-green:hover,
+.btn-green:active,
+.btn-green.active,
+.open > .dropdown-toggle.btn-green,
+.btn-green:active:hover,
+.btn-green.active:hover,
+.open > .dropdown-toggle.btn-green:hover,
+.btn-green:active:focus,
+.btn-green.active:focus,
+.open > .dropdown-toggle.btn-green:focus,
+.btn-green:active.focus,
+.btn-green.active.focus,
+.open > .dropdown-toggle.btn-green.focus,
+.icon-circle.icon-bordered.fa-green:hover,
+.icon-square.icon-bordered.fa-green:hover{
+    border-bottom-color: #3a8825;
+}
+
+/*
+Red color
+=========================== */
+.red,
+.btn-red.btn-bordered,
+.fa-red,
+.icon-circle.icon-bordered.fa-red,
+.icon-square.icon-bordered.fa-red{
+    color: #e24040;
+}
+
+.icon-circle.icon-bordered.fa-red:hover,
+.icon-square.icon-bordered.fa-red:hover{
+    color: #c13636;
+}
+
+.red-bg,
+.btn-red,
+.highlight.red,
+.icon-circle.fa-red,
+.icon-square.fa-red,
+.donut-chart.chart-red .pie,
+.progress.progress-red .progress-bar{
+    background-color: #e24040;
+}
+
+.btn-red:focus,
+.btn-red.focus,
+.btn-red:hover,
+.btn-red:active,
+.btn-red.active,
+.open > .dropdown-toggle.btn-red,
+.btn-red:active:hover,
+.btn-red.active:hover,
+.open > .dropdown-toggle.btn-red:hover,
+.btn-red:active:focus,
+.btn-red.active:focus,
+.open > .dropdown-toggle.btn-red:focus,
+.btn-red:active.focus,
+.btn-red.active.focus,
+.open > .dropdown-toggle.btn-red.focus,
+.icon-circle.fa-red:hover,
+.icon-square.fa-red:hover{
+    background-color: #c13636;
+}
+
+.red-border,
+.btn-red,
+.btn-red.btn-bordered,
+.btn-red.btn-bordered.btn-icon .fa,
+.icon-circle.icon-bordered.fa-red,
+.icon-square.icon-bordered.fa-red{
+    border-color: #e24040;
+}
+
+.btn-red:focus,
+.btn-red.focus,
+.btn-red:hover,
+.btn-red:active,
+.btn-red.active,
+.open > .dropdown-toggle.btn-red,
+.btn-red:active:hover,
+.btn-red.active:hover,
+.open > .dropdown-toggle.btn-red:hover,
+.btn-red:active:focus,
+.btn-red.active:focus,
+.open > .dropdown-toggle.btn-red:focus,
+.btn-red:active.focus,
+.btn-red.active.focus,
+.open > .dropdown-toggle.btn-red.focus,
+.icon-circle.icon-bordered.fa-red:hover,
+.icon-square.icon-bordered.fa-red:hover{
+    border-color: #c13636;
+}
+
+.btn-red{
+    border-bottom-color: #c13636;
+}
+
+.btn-red:focus,
+.btn-red.focus,
+.btn-red:hover,
+.btn-red:active,
+.btn-red.active,
+.open > .dropdown-toggle.btn-red,
+.btn-red:active:hover,
+.btn-red.active:hover,
+.open > .dropdown-toggle.btn-red:hover,
+.btn-red:active:focus,
+.btn-red.active:focus,
+.open > .dropdown-toggle.btn-red:focus,
+.btn-red:active.focus,
+.btn-red.active.focus,
+.open > .dropdown-toggle.btn-red.focus,
+.icon-circle.icon-bordered.fa-red:hover,
+.icon-square.icon-bordered.fa-red:hover{
+    border-bottom-color: #a22626;
+}

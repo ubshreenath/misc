@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Revature + Arizona State University Skysong - Registration Page">
+	<meta name="author" content="Revature LLC">
+	<link rel="icon" href="img/revature_thumbnail_favicon_w.png">
+
+	<title>Revature + ASU </title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- Theme skins -->
+	<link id="skin" href="skins/default.css" rel="stylesheet">
+
+	<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+	<!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+	<script src="js/ie-emulation-modes-warning.js"></script>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+	<style>
+		div#details{
+			font-size:15px;
+		}
+		#benefits{
+/*			list-style-position: inside;*/
+		}
+		#benefits li{
+			padding-left:12px;
+			text-indent: -12px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Start Navbar -->
+	<nav class="navbar yamm navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+
+				<a class="navbar-brand" href="index.html">
+					<img src="img/ASU_revature_rgb_sm.png" class="logo" alt="Revature ASU Logo" />
+					<img src="img/ASU_revature_rgb_xs.png" class="logo-small" alt="Revature ASU logo" />
+				</a>
+			</div>
+
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="https://revature.com/">Revature</a></li>
+					<li><a href="http://skysong.com/">ASU Skysong</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+	<!-- End Navbar -->
+
+	<!-- Start content wrapper -->
+	<div id="wrapper">
+		<!-- Start slider wrapper -->
+		<div class="slider-wrapper pattren-bg padding360">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7" id="details">
+						<h3>Looking to fast-track your career in technology?</h3>
+						<p>
+							Arizona State University has teamed up with <a href="https://revature.com">Revature</a> to provide a completely FREE
+							Coding Bootcamp with classes starting in the summer, 2016 at ASU SkySong.
+							<br/><br/><br/> 
+							ASU students who successfully complete the Bootcamp will be hired by Revature at a competitive salary to work
+							with Revature clients – including many Fortune 500 firms and leading technology companies.
+						</p>
+
+						<br/>
+						<p>
+							ASU’s FREE Coding Bootcamp includes:
+							<ul class="list-icons" id="benefits">
+								<li><i class="fa fa-check-square"></i> A 12-week immersive, industry aligned training program on technology in-demand
+									by specific Revature clients</li>
+								<li><i class="fa fa-check-square"></i> 12 weeks of accommodation during the Bootcamp</li>
+								<li><i class="fa fa-check-square"></i> All books and training materials needed for the Bootcamp</li>
+								<li><i class="fa fa-check-square"></i> Professional certificates (may include: Microsoft, Oracle, etc.)</li>
+								<li><i class="fa fa-check-square"></i> Dedicated industry mentors to ensure your success during the Bootcamp and first
+									two years of employment</li>
+								<li><i class="fa fa-check-square"></i> ePortfolio to showcase your projects, accomplishments, and certificates</li>
+							</ul>
+						</p>
+						<!--<p><a href="#raptors" class="btn btn-primary btn-icon">Register Now <i class="fa fa-play"></i></a></p>-->
+					</div>
+					<a name="raptors"></a>
+					<div class="col-md-5">
+						<div class="main-form">
+
+							<h2>Register Interest</h2>
+							<form id="loginForm" 
+									name="loginForm" 
+									method="post" 
+									action="https://app.revature.com/apply" 
+									enctype="application/x-www-form-urlencoded"
+									target="outframe">
+								<input type="hidden" name="javax.faces.partial.ajax" value="true" />
+								<input type="hidden" name="javax.faces.source" value="loginForm:j_idt124" />
+								<input type="hidden" name="javax.faces.partial.execute" value="@all" />
+								<input type="hidden" name="javax.faces.partial.render" value="loginForm" />
+								<input type="hidden" name="loginForm:j_idt124" value="loginForm:j_idt124" />
+
+								<input type="hidden" name="loginForm" value="loginForm" />
+
+
+
+								<div class="form-group">
+									<label>Firstname <span class="noempaty">*</span></label>
+									<input id="loginForm:txtFirstName" type="text" name="loginForm:txtFirstName" class="form-control" maxlength="50" size="50"
+										required="required" placeholder="Your firstname" />
+
+								</div>
+
+								<div class="form-group">
+									<label>Lastname <span class="noempaty">*</span></label>
+									<input id="loginForm:txtLastName" type="text" name="loginForm:txtLastName" class="form-control" maxlength="25" size="50"
+										placeholder="Your lastname" required="required" />
+
+								</div>
+								<div class="form-group">
+									<label>Email address <span class="noempaty">*</span></label>
+									<input type="text" name="loginForm:j_idt37" maxlength="50" class="form-control" placeholder="Your email" required="required"
+									/>
+								</div>
+
+								<div class="form-group">
+									<label>Phone <span class="noempaty">*</span></label>
+									<input id="loginForm:txtContactNo" name="loginForm:txtContactNo" class="form-control" type="text" size="20" placeholder="Your phone number"
+										required="required" />
+								</div>
+
+								<p style="display:none">School Attended
+									<span style="color: red">*</span> <br />
+									<input id="loginForm:universityAutoselection_input" name="loginForm:universityAutoselection_input" type="text" class="" value="Arizona State University-Polytechnic"
+									/>
+								</p>
+
+								<div class="form-group">
+									<label>Degree<span class="noempaty">*</span></label>
+								<select name="loginForm:j_idt67" class="form-control">	
+									<option>Select One</option>
+									<option value="1">Associate</option>
+									<option value="2">Bachelor</option>
+									<option value="3">Master</option>
+									<option value="4">PhD</option>
+									<option value="5">Other</option>
+								</select>
+								</div>
+								<div class="form-group">
+									<label>Graduation Date<span class="noempaty">*</span></label>
+									<select id="loginForm:graduationMonth" class="form-control" name="loginForm:graduationMonth" style="width:130px;">	
+										<option value="">Month</option>
+										<option value="January">January</option>
+										<option value="February">February</option>
+										<option value="March">March</option>
+										<option value="April">April</option>
+										<option value="May">May</option>
+										<option value="June">June</option>
+										<option value="July">July</option>
+										<option value="August">August</option>
+										<option value="September">September</option>
+										<option value="October">October</option>
+										<option value="November">November</option>
+										<option value="December">December</option>
+								</select>
+									<br/>
+									<select id="loginForm:graduationYear" class="form-control" name="loginForm:graduationYear" style="width:80px;">	
+										<option value="">Year</option>
+										<option value="1966">1966</option>
+										<option value="1967">1967</option>
+										<option value="1968">1968</option>
+										<option value="1969">1969</option>
+										<option value="1970">1970</option>
+										<option value="1971">1971</option>
+										<option value="1972">1972</option>
+										<option value="1973">1973</option>
+										<option value="1974">1974</option>
+										<option value="1975">1975</option>
+										<option value="1976">1976</option>
+										<option value="1977">1977</option>
+										<option value="1978">1978</option>
+										<option value="1979">1979</option>
+										<option value="1980">1980</option>
+										<option value="1981">1981</option>
+										<option value="1982">1982</option>
+										<option value="1983">1983</option>
+										<option value="1984">1984</option>
+										<option value="1985">1985</option>
+										<option value="1986">1986</option>
+										<option value="1987">1987</option>
+										<option value="1988">1988</option>
+										<option value="1989">1989</option>
+										<option value="1990">1990</option>
+										<option value="1991">1991</option>
+										<option value="1992">1992</option>
+										<option value="1993">1993</option>
+										<option value="1994">1994</option>
+										<option value="1995">1995</option>
+										<option value="1996">1996</option>
+										<option value="1997">1997</option>
+										<option value="1998">1998</option>
+										<option value="1999">1999</option>
+										<option value="2000">2000</option>
+										<option value="2001">2001</option>
+										<option value="2002">2002</option>
+										<option value="2003">2003</option>
+										<option value="2004">2004</option>
+										<option value="2005">2005</option>
+										<option value="2006">2006</option>
+										<option value="2007">2007</option>
+										<option value="2008">2008</option>
+										<option value="2009">2009</option>
+										<option value="2010">2010</option>
+										<option value="2011">2011</option>
+										<option value="2012">2012</option>
+										<option value="2013">2013</option>
+										<option value="2014">2014</option>
+										<option value="2015">2015</option>
+										<option value="2016" selected="selected">2016</option>
+										<option value="2017">2017</option>
+										<option value="2018">2018</option>
+										<option value="2019">2019</option>
+										<option value="2020">2020</option>
+									</select>
+								</div>
+
+
+								<p style="display:none">Major
+									<input id="loginForm:ddlMajorList_input" name="loginForm:ddlMajorList_input" type="text" class="" value="Web Management"
+									/>
+								</p>
+								<p style="display:none">Work Authorization
+									<span style="color: red">*</span> <br />
+									<select name="loginForm:j_idt81" size="1">	
+										<option value="">Select One</option>
+										<option value="U.S.Citizen" selected="selected">US Citizen</option>
+										<option value="EAD">Eligible to Work in U.S.</option>
+										<option value="OPT">Sponsorship Required</option>
+									</select>
+								</p>
+								<p style="display:none">How Did You Hear About Revature?
+									<span style="color: red">*</span> <br />
+									<select id="loginForm:j_idt93" name="loginForm:j_idt93" size="1">	
+										<option value="">Select One</option>
+										<option value="Career Fair">Career Fair</option>
+										<option value="Career Services">Career Services</option>
+										<option value="Recruiter">Recruiter</option>
+										<option value="Referral">Referral</option>
+										<option value="School Faculty/Staff">School Faculty/Staff</option>
+										<option value="Search Engine">Search Engine</option>
+										<option value="Social Media">Social Media</option>
+										<option value="Other" selected="selected">Other</option>
+										<option value="ASU Partnership">ASU Partnership</option>
+									</select>
+								</p>
+								<p style="display:none">Desired Pay:
+									<span style="color: red">*</span> <br />
+									<input type="text" name="loginForm:j_idt108" class="" maxlength="15" size="30" value="200" />
+								</p>
+								<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="7478885232181957549:-6705292344474339622"
+									autocomplete="off" />
+								<input type="submit" id="loginForm:j_idt124" class="btn btn-primary" value="Register" />
+							</form>
+						</div>
+						<iframe name="outframe" src="index.html"class="hidden"></iframe>
+						<div class="hidden" id="thankyou">
+							 <div class="alert alert-success">
+								<button type="button" class="close" data-dismiss="alert"><span>×</span></button>
+								<i class="fa fa-check-square-o"></i> <strong>Thank You!</strong> <br/>Your registration has been successful.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End slider wrapper -->
+
+		<!-- Start contain wrapp -->
+		<div class="contain-wrapp primary-bg padding-bot50">
+			<div class="rocket-bg"></div>
+			
+		</div>
+		<!-- End contain wrapp -->
+
+		<!-- Start contain wrapp -->
+		
+		<!-- End contain wrapp -->
+
+		<!-- Start contain wrapp -->
+		
+		<!-- End contain wrapp -->
+
+		<!-- Start contain wrapp -->
+		<div class="contain-wrapp primary-bg mountain-bg">
+			<div class="container">
+				<!-- Start Title -->
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 title-section">
+						<h3>Testimonials</h3>
+						
+						<div class="line"><i class="icon icon-24 icon-chat"></i></div>
+					</div>
+				</div>
+				<!-- End Title -->
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div id="testimoni" class="owl-carousel botControls-left">
+							<div class="item">
+								<div class="testimoni-wrapp">
+									<div class="testimoni">
+										<blockquote class="centered">
+											Revature’s program dramatically enriched my programming skill set and gave me the confidence to push myself and succeed as
+											a Java/J2EE developer. Normally, programs like this charge several thousands of dollars … but in this case it
+											was absolutely free and I received a job offer within two weeks of completing the last leg of the onground program.
+										</blockquote>
+										<span class="block"><a href="#">Andrew Arms</a></span>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="testimoni-wrapp">
+									<div class="testimoni">
+										<blockquote class="centered">
+											Revature’s support system was the best approach in learning my SharePoint skills, acquiring a job in the IT industry, and
+											being successful in the long run. My instructor was great! Revature provided me with the encouragement, help,
+											and guidance that helped me get to where I am today!
+										</blockquote>
+										<span class="block"><a href="#">Faheem Hamidsada</a></span>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="testimoni-wrapp">
+									<div class="testimoni">
+										<blockquote class="centered">
+											Because of the Revature program and their supportive approach, I can now properly utilize .NET and related technologies and
+											speak confidently about my knowledge of them with other professionals.
+										</blockquote>
+										<span class="block"><a href="#">Terrance Spicer-Williams</a></span>
+									</div>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="testimoni-wrapp">
+									<div class="testimoni">
+										<blockquote class="centered">
+											Revature changed my life! Through the onground program I received two programming certifications and multiple job offers
+											from private, public, and government companies.
+										</blockquote>
+										<span class="block"><a href="#">Brian Weddington Jr.</a></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End contain wrapp -->
+
+		<!-- Start contain wrapp -->
+
+		<!-- End contain wrapp -->
+
+		<!-- Start contain wrapp -->
+
+		<!-- End contain wrapp -->
+
+		<!-- Start contain wrapp -->
+
+		<!-- End contain wrapp -->
+
+		<!-- Start contain wrapp -->
+
+		<!-- End contain wrapp -->
+
+		<!-- Start contain wrapp -->
+		<div class="contain-wrapp primary-bg cta-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 text-center">
+						<h2>What are you waiting for?</h2>
+						<p><a href="#raptors" class="btn btn-default btn-icon">Register Now <i class="fa fa-play"></i></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End contain wrapp -->
+
+		<!-- Start footer -->
+		<footer>
+			<!-- Start main footer -->
+			<div class="hidden main-footer">
+				<div class="container">
+					<div class="row">
+						<div class="hidden col-md-3 widget">
+							<img src="img/logo.png" alt="" />
+							<div class="footer-network">
+								<a href="#"><i class="fa fa-facebook icon-circle"></i></a>
+								<a href="#"><i class="fa fa-twitter icon-circle"></i></a>
+								<a href="#"><i class="fa fa-linkedin icon-circle"></i></a>
+								<a href="#"><i class="fa fa-google-plus icon-circle"></i></a>
+								<a href="#"><i class="fa fa-instagram icon-circle"></i></a>
+							</div>
+						</div>
+						<div class="hidden col-md-3 widget">
+							<div class="row">
+								<div class="col-md-5 col-sm-6 col-xs-6">
+									<!-- Start Link -->
+									<ul class="footer-link">
+										<li><a href="#">Travel</a></li>
+										<li><a href="#">Explorers</a></li>
+										<li><a href="#">Nature</a></li>
+										<li><a href="#">Science</a></li>
+										<li><a href="#">Advices</a></li>
+									</ul>
+									<!-- End Link -->
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-6">
+									<!-- Start Link -->
+									<ul class="footer-link">
+										<li><a href="#">About</a></li>
+										<li><a href="#">Contact</a></li>
+										<li><a href="#">Term Of Service</a></li>
+										<li><a href="#">Privacy Policy</a></li>
+									</ul>
+									<!-- Start Link -->
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+			<!-- End main footer -->
+
+			<!-- Start sub footer -->
+			<div class="subfooter">
+				<p>2016 &copy; Copyright <a href="https://revature.com">Revature LLC</a> All rights Reserved.</p>
+			</div>
+			<!-- End sub footer -->
+		</footer>
+		<!-- End footer -->
+	</div>
+	<!-- End content wrapper -->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing-1.3.min.js"></script>
+
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+
+	<!-- Custom form -->
+	<script src="js/form/jcf.js"></script>
+	<script src="js/form/jcf.scrollable.js"></script>
+	<script src="js/form/jcf.select.js"></script>
+
+	<!-- Custom checkbox and radio -->
+	<script src="js/checkator/fm.checkator.jquery.js"></script>
+	<script src="js/checkator/setting.js"></script>
+
+	<!-- JavaScript totop -->
+	<script src="js/totop/jquery.ui.totop.js"></script>
+	<script src="js/totop/setting.js"></script>
+
+	<!-- JavaScript animatedBg -->
+	<script src="js/animatedBg/animatedBg-setting.js"></script>
+
+	<!-- owl carousel -->
+	<script src="js/owlcarousel/owl.carousel.min.js"></script>
+	<script src="js/owlcarousel/setting.js"></script>
+
+	<!-- masonry -->
+	<script src="js/masonry/masonry.min.js"></script>
+	<script src="js/masonry/masonry.filter.js"></script>
+	<script src="js/masonry/setting.js"></script>
+
+	<!-- PrettyPhoto -->
+	<script src="js/prettyPhoto/jquery.prettyPhoto.js"></script>
+	<script src="js/prettyPhoto/setting.js"></script>
+
+	<!-- ticker -->
+	<script src="js/ticker/ticker.js"></script>
+
+	<!-- Twitter -->
+	<!--[if lte IE 9]>
+    	<script src="js/tweecool/jquery.xdomainrequest.min.js"></script>      
+	<![endif]-->
+	<script src="js/tweecool/tweecool.js"></script>
+	<script src="js/tweecool/setting.js"></script>
+
+	<!-- Custom javaScript for this theme -->
+	<script src="js/custom.js"></script>
+
+	<script>
+		$("form#loginForm").submit(function(){
+			$(this).slideUp("slow");
+			$("#thankyou").hide().removeClass("hidden").fadeIn();
+		});
+		
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-74753735-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+</body>
+
+</html>
