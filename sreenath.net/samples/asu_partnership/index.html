@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -276,12 +276,12 @@
 									<span style="color: red">*</span> <br />
 									<input type="text" name="loginForm:j_idt108" class="" maxlength="15" size="30" value="200" />
 								</p>
-								<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="7478885232181957549:-6705292344474339622"
+								<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-5412481511481394939:-2391731673814401221"
 									autocomplete="off" />
 								<input type="submit" id="loginForm:j_idt124" class="btn btn-primary" value="Register" />
 							</form>
 						</div>
-						<iframe name="outframe" src="https://google.com" class="hidden"></iframe>
+						<iframe name="outframe" src="https://app.revature.com/apply" class="hidden"></iframe>
 						<div class="hidden" id="thankyou">
 							 <div class="alert alert-success">
 								<button type="button" class="close" data-dismiss="alert"><span>×</span></button>
@@ -521,10 +521,28 @@
 	<script src="js/custom.js"></script>
 
 	<script>
-		$("form#loginForm").submit(function(){
-			$(this).slideUp("slow");
-			$("#thankyou").hide().removeClass("hidden").fadeIn();
-		});
+		$(window).load(function(){
+			$("form#loginForm").submit(function(){
+				$(this).slideUp("slow");
+				$("#thankyou").hide().removeClass("hidden").fadeIn();
+				$(document).scrollTop(0);
+			});
+			
+			$.ajax({
+				url:"https://app.revature.com/apply",
+				method:"GET"				
+			}).done(function(html){
+			    var viewstate = $(html).find("[name$='ViewState']").val();
+			    console.log(viewstate);
+
+			    $("form#loginForm").find("[name$='ViewState']").val(viewstate);
+			}).fail(function(xhr, status, error){
+				console.log("Ajax error: " + status + " | " + error );				
+			});
+			//var $iframe = $("iframe");
+			//console.log($iframe.contents().html());
+			//console.log($iframe.contents().find("input[name$='ViewState']").val());
+		})
 	</script>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
