@@ -110,9 +110,9 @@
 							<form id="loginForm" 
 									name="loginForm" 
 									method="post" 
-									action="https://preview.revature.com/apply" 
+									action="https://app.revature.com/apply" 
 									enctype="application/x-www-form-urlencoded"
-									<!--target="outframe"-->>
+									target="outframe">
 								<input type="hidden" name="javax.faces.partial.ajax" value="true" />
 								<input type="hidden" name="javax.faces.source" value="loginForm:j_idt124" />
 								<input type="hidden" name="javax.faces.partial.execute" value="@all" />
@@ -276,24 +276,18 @@
 									<span style="color: red">*</span> <br />
 									<input type="text" name="loginForm:j_idt108" class="" maxlength="15" size="30" value="200" />
 								</p>
-								<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="" autcomplete="off" />
+								<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="7044759010657712724:4312623460843610430"
+									autocomplete="off" />
 								<input type="submit" id="loginForm:j_idt124" class="btn btn-primary" value="Register" />
 							</form>
 						</div>
-						<iframe name="outframe" src="https://preview.revature.com/sign-up" class="hidden"></iframe>
+						<iframe name="outframe" src="https://app.revature.com/apply" class="hidden"></iframe>
 						<div class="hidden" id="thankyou">
 							 <div class="alert alert-success">
 								<button type="button" class="close" data-dismiss="alert"><span>×</span></button>
 								<i class="fa fa-check-square-o"></i> <strong>Thank You!</strong> <br/>Your registration has been successful.
 							</div>
 						</div>
-
-                        <div class="hidden" id="error">
-                            <div class="alert alert-danger">
-                                <!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
-                                <i class="fa fa-flash"></i> <strong>Oh snap !</strong> Looks like we hit a snag. Maybe <span style="cursor:pointer;text-decoration:underline">try again?</span></a>
-                            </div>
-                        </div>
 					</div>
 				</div>
 			</div>
@@ -408,7 +402,7 @@
 		<div class="contain-wrapp primary-bg cta-container">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-10 col-md-offset-1 text-center">vie
+					<div class="col-md-10 col-md-offset-1 text-center">
 						<h2>What are you waiting for?</h2>
 						<p><a href="#raptors" class="btn btn-default btn-icon">Register Now <i class="fa fa-play"></i></a></p>
 					</div>
@@ -527,58 +521,13 @@
 	<script src="js/custom.js"></script>
 
 	<script>
-		$(document).ready(function(){
-		    $("form#loginForm").submit(function () {
-		        /*var data = $(this).serialize();
-		        $.ajax({
-		            url:this.action, 
-		            data: data,
-		            method: "GET"
-		        }).always(function (res) {
-		            
-		            if ($(res).find("error").length == 0 && res.statusText != "error") {
-		                $("form#loginForm").slideUp("slow");
-		                $("#thankyou").hide().removeClass("hidden").fadeIn();
-		                $(document).scrollTop(0);
-		            }
-		            else {
-		                $("form#loginForm").slideUp("slow");
-		                $("#error").hide().removeClass("hidden").fadeIn();
-		                $(document).scrollTop(0);
-		            }
-		        });
-
-
-		        return false;*/
-
-
-		        
-		        
-		    });
-
-		    // Close the error div and show form again
-		    $("#error").click(function (e) {
-		        if (e.target.tagName == "SPAN") {
-		            $("form#loginForm").fadeIn("slow");
-		            $("#error").slideUp().addClass();
-		            $(document).scrollTop(0);
-		        }
-		    });
-
-		    $.ajax({
-		        url: "https://preview.revature.com/apply",
-		        method: "GET"
-		    }).done(function (html) {
-		        var viewstate = $(html).find("[name$='ViewState']").val();
-		        console.log(viewstate);
-
-		        $("form#loginForm").find("[name$='ViewState']").val(viewstate);
-		    }).fail(function (xhr, status, error) {
-		        console.log("Ajax error: " + status + " | " + error);
-		    });
-			
-			
-			//var $iframe = $("iframe");
+		$(window).load(function(){
+			$("form#loginForm").submit(function(){
+				$(this).slideUp("slow");
+				$("#thankyou").hide().removeClass("hidden").fadeIn();
+				$(document).scrollTop(0);
+			});
+			var $iframe = $("iframe");
 			//console.log($iframe.contents().html());
 			//console.log($iframe.contents().find("input[name$='ViewState']").val());
 		})

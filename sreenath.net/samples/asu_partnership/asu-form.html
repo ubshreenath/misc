@@ -1,43 +1,48 @@
 <form id="loginForm" name="loginForm" method="post" action="https://app.revature.com/apply" enctype="application/x-www-form-urlencoded">
-								<input type="hidden" name="javax.faces.partial.ajax" value="true" />
-								<input type="hidden" name="javax.faces.source" value="loginForm:j_idt124" />
-								<input type="hidden" name="javax.faces.partial.execute" value="@all" />
-								<input type="hidden" name="javax.faces.partial.render" value="loginForm" />
-								<input type="hidden" name="loginForm:j_idt124" value="loginForm:j_idt124" />
+    <input type="hidden" name="javax.faces.partial.ajax" value="true" />
+    <input type="hidden" name="javax.faces.source" value="loginForm:j_idt124" />
+    <input type="hidden" name="javax.faces.partial.execute" value="@all" />
+    <input type="hidden" name="javax.faces.partial.render" value="loginForm" />
+    <input type="hidden" name="loginForm:j_idt124" value="loginForm:j_idt124" />
 
-								<input type="hidden" name="loginForm" value="loginForm" />
+    <input type="hidden" name="loginForm" value="loginForm" />
 
-					
-					
-						<div class="form-group">
-							<label>Firstname <span class="noempaty">*</span></label>
-							<input id="loginForm:txtFirstName" type="text" name="loginForm:txtFirstName" class="form-control" maxlength="50" size="50" required="required" placeholder="Your firstname" />
-							
-						</div>
-						
-						<div class="form-group">
-							<label>Lastname <span class="noempaty">*</span></label>
-							<input id="loginForm:txtLastName" type="text" name="loginForm:txtLastName" class="form-control" maxlength="25" size="50" placeholder="Your lastname" required="required" />
-						
-						</div>
-						<div class="form-group">
-							<label>Email address <span class="noempaty">*</span></label>
-							<input type="text" name="loginForm:j_idt37" maxlength="50" class="form-control" placeholder="Your email" required="required" /> 
-						</div>
-						
-						<div class="form-group">
-							<label>Phone <span class="noempaty">*</span></label>
-							<input id="loginForm:txtContactNo" name="loginForm:txtContactNo" class="form-control" type="text" size="20" placeholder="Your phone number" required="required"/>
-						</div>
-						
-						<p style="display:none">School Attended
-							<span style="color: red">*</span> <br />
-							<input id="loginForm:universityAutoselection_input" name="loginForm:universityAutoselection_input" type="text" class="" value="Arizona State University-Polytechnic"  />
-						</p>
 
-						<div class="form-group">
-							<label>Degree<span class="noempaty">*</span></label>
-							<select name="loginForm:j_idt67" class="form-control">	
+
+    <div class="form-group">
+        <label>Firstname <span class="noempaty">*</span></label>
+        <input id="loginForm:txtFirstName" type="text" name="loginForm:txtFirstName" class="form-control" maxlength="50" size="50"
+            required="required" placeholder="Your firstname" />
+
+    </div>
+
+    <div class="form-group">
+        <label>Lastname <span class="noempaty">*</span></label>
+        <input id="loginForm:txtLastName" type="text" name="loginForm:txtLastName" class="form-control" maxlength="25" size="50"
+            placeholder="Your lastname" required="required" />
+
+    </div>
+    <div class="form-group">
+        <label>Email address <span class="noempaty">*</span></label>
+        <input type="text" name="loginForm:j_idt37" maxlength="50" class="form-control" placeholder="Your email" required="required"
+        />
+    </div>
+
+    <div class="form-group">
+        <label>Phone <span class="noempaty">*</span></label>
+        <input id="loginForm:txtContactNo" name="loginForm:txtContactNo" class="form-control" type="text" size="20" placeholder="Your phone number"
+            required="required" />
+    </div>
+
+    <p style="display:none">School Attended
+        <span style="color: red">*</span> <br />
+        <input id="loginForm:universityAutoselection_input" name="loginForm:universityAutoselection_input" type="text" class="" value="Arizona State University-Polytechnic"
+        />
+    </p>
+
+    <div class="form-group">
+        <label>Degree<span class="noempaty">*</span></label>
+        <select name="loginForm:j_idt67" class="form-control">	
 								<option>Select One</option>
 								<option value="1">Associate</option>
 								<option value="2">Bachelor</option>
@@ -45,10 +50,10 @@
 								<option value="4">PhD</option>
 								<option value="5">Other</option>
 							</select>
-						</div>
-						<div class="form-group">
-							<label>Graduation Date<span class="noempaty">*</span></label>
-								<select id="loginForm:graduationMonth" class="form-control" name="loginForm:graduationMonth" style="width:130px;">	
+    </div>
+    <div class="form-group">
+        <label>Graduation Date<span class="noempaty">*</span></label>
+        <select id="loginForm:graduationMonth" class="form-control" name="loginForm:graduationMonth" style="width:130px;">	
 									<option value="">Month</option>
 									<option value="January">January</option>
 									<option value="February">February</option>
@@ -63,8 +68,8 @@
 									<option value="November">November</option>
 									<option value="December">December</option>
 								</select>
-								<br/>
-								<select id="loginForm:graduationYear" class="form-control" name="loginForm:graduationYear" style="width:80px;">	
+        <br/>
+        <select id="loginForm:graduationYear" class="form-control" name="loginForm:graduationYear" style="width:80px;">	
 									<option value="">Year</option>
 									<option value="1966">1966</option>
 									<option value="1967">1967</option>
@@ -122,24 +127,25 @@
 									<option value="2019">2019</option>
 									<option value="2020">2020</option>
 								</select>
-						</div>
-						
-						
-						<p style="display:none">Major
-							<input id="loginForm:ddlMajorList_input" name="loginForm:ddlMajorList_input" type="text" class="" value="Web Management"/>
-						</p>
-						<p style="display:none">Work Authorization
-							<span style="color: red">*</span> <br />
-							<select  name="loginForm:j_idt81" size="1">	
+    </div>
+
+
+    <p style="display:none">Major
+        <input id="loginForm:ddlMajorList_input" name="loginForm:ddlMajorList_input" type="text" class="" value="Web Management"
+        />
+    </p>
+    <p style="display:none">Work Authorization
+        <span style="color: red">*</span> <br />
+        <select name="loginForm:j_idt81" size="1">	
 								<option value="">Select One</option>
 								<option value="U.S.Citizen" selected="selected">US Citizen</option>
 								<option value="EAD">Eligible to Work in U.S.</option>
 								<option value="OPT">Sponsorship Required</option>
 							</select>
-						</p>
-						<p style="display:none">How Did You Hear About Revature?
-							<span style="color: red">*</span> <br />
-							<select id="loginForm:j_idt93" name="loginForm:j_idt93" size="1" >	
+    </p>
+    <p style="display:none">How Did You Hear About Revature?
+        <span style="color: red">*</span> <br />
+        <select id="loginForm:j_idt93" name="loginForm:j_idt93" size="1">	
 								<option value="">Select One</option>
 								<option value="Career Fair">Career Fair</option>
 								<option value="Career Services">Career Services</option>
@@ -151,11 +157,12 @@
 								<option value="Other" selected="selected">Other</option>
 								<option value="ASU Partnership">ASU Partnership</option>
 							</select>
-						</p>
-						<p style="display:none">Desired Pay:
-							<span style="color: red">*</span> <br /> 
-							<input type="text" name="loginForm:j_idt108" class="" maxlength="15" size="30" value="200"/>
-						</p>
-							<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="8911779134296192199:-1198279621284578473" autocomplete="off" />
-							<input type="submit" id="loginForm:j_idt124" class="btn btn-primary" value="Register Now"/>
+    </p>
+    <p style="display:none">Desired Pay:
+        <span style="color: red">*</span> <br />
+        <input type="text" name="loginForm:j_idt108" class="" maxlength="15" size="30" value="200" />
+    </p>
+    <input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="8911779134296192199:-1198279621284578473"
+        autocomplete="off" />
+    <input type="submit" id="loginForm:j_idt124" class="btn btn-primary" value="Register Now" />
 </form>
